@@ -4,24 +4,102 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="scripts.js"></script>
-    <title>My Portfolio</title>
+    <title>Jansen Agcaoili | Portfolio</title>
   </head>
   <body>
-    <div class="nav">
-      <nav>
-        <ul>
-          <h3>Jansen Agcaoili</h3>
-          <a href="#">Home</a>
-          <a href="#">Experiences</a>
-          <a href="#">Hobbies</a>
-          <a href="#">.</a>
-        </ul>
+    <header class="nav">
+      <h3>Jansen Agcaoili</h3>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#resume">Resume</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#cheatsheet">CSS Cheat Sheet</a>
       </nav>
-    </div>
-    <div class="HomePage">
-      <h1>Website Under Construction</h1>
-      <p>We're currently working on our website. Please check back soon!</p>
-    </div>
+    </header>
+
+    <main class="container">
+      <section id="home" class="section">
+        <div class="intro-content">
+          <img src="Photos/ProPic.jpg" alt="Profile Picture" class="Profile-Image" />
+          <h1>Hello, I'm Jansen 👋</h1>
+          <p>
+            An aspiring Full Stack Developer/Personal Trainer. Welcome to my
+            website!
+          </p>
+          <div class="scroll-down">
+            <span>↓</span>
+        </div>
+      </section>
+
+      <section id="resume" class="resume section">
+        <div class="resume-container">
+          <div class="resume-left">
+            <h2>Personal Profile</h2>
+            <p>A devoted, competent, and persevering individual whose primary goal is to 
+              learn and cultivate technology knowledge towards excellence. Actively been part of several
+              circles who specialize in specific aspects such as technology and fitness as well as retaining 
+              positive relations and communications to people to ensure a healthy environment. Seeking and making sure to 
+              gain useful experience every day and willing to learn as well as to cooperate in order to improve 
+              performance and consistency. </p>
+
+            <ul class="info-list">
+              <li><strong>Email:</strong> ajagcaoili4@gmail.com</li>
+              <li><strong>Location:</strong> Alberta, Canada</li>
+              <li><strong>Phone:</strong> +1 403-919-6306</li>
+            </ul>
+      
+            <h3>Skills</h3>
+            <ul class="skills-list">
+              <li>HTML, CSS, JavaScript</li>
+              <li>React (basic)</li>
+              <li>UI/UX Design Principles</li>
+              <li>Git & GitHub</li>
+              <li>Kotlin</li>
+              <li>C++, C#</li>
+              <li>CISCO CCNA certificate holder</li>
+            </ul>
+          </div>
+      
+          <div class="resume-right">
+            <h3>Experience</h3>
+            <div class="experience-item">
+              <h4>Website Developer</h4>
+              <p class="duration">October 2024 – Feb 2025</p><br/>
+              <p>•	Led the team in creating the website using various tools (Figma, Visual Studio Code, Squarespace)</p>
+              <p>•	Created 80% of the design for the revision</p>
+            </div>
+      
+            <h3>Education</h3>
+            <div class="education-item">
+              <h4>Software Development Diploma</h4>
+              <p class="duration">Jan 2024 - Present</p><br/>
+              <p>Bow Valley College</p>
+            </div>
+      
+            <h3>Projects</h3>
+            <div class="projects">
+              <a href="#" class="project-card">
+                <img src="project1.png" alt="Project Sample" />
+                <p>Simple Portfolio Website</p>
+              </a>
+              <a href="#" class="project-card">
+                <img src="project2.png" alt="Project Sample" />
+                <p>Interactive JS Calculator</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>      
+
+      <section id="hobbies" class="section">
+        <h2>Hobbies</h2>
+        <p>Coming soon...</p>
+      </section>
+
+      <section id="cheatsheet" class="section">
+        <h2>CSS Cheat Sheet</h2>
+        <p>Coming soon...</p>
+      </section>
+    </main>
   </body>
 </html>
