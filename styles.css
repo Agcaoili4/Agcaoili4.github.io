@@ -1,7 +1,8 @@
-/*Adding nice touch of scrolling for enchanced user experience*/
+/* Adding nice touch of scrolling for enhanced user experience */
 html {
   scroll-behavior: smooth;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,6 +19,7 @@ body {
   width: 100%;
 }
 
+/* Navigation Bar */
 .nav {
   display: flex;
   justify-content: space-between;
@@ -29,7 +31,6 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
-  pointer-events: stroke;
 }
 
 .nav h3 {
@@ -47,6 +48,19 @@ body {
   font-weight: 500;
 }
 
+.Name {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.Name:hover,
+.nav-links a:hover {
+  color: gray;
+}
+
+/* Container for sections */
 .container {
   display: flex;
   flex-direction: column;
@@ -60,13 +74,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   padding: 2rem;
   text-align: center;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
-/*Intro design section*/
+/* Intro Section */
 .intro {
   background-color: #f5f5f5;
   display: flex;
@@ -110,12 +125,11 @@ body {
   margin-top: 2rem;
   font-size: 2rem;
   animation: bounce 1.5s infinite;
-  opacity: 0.5;
-  color: black;
   opacity: 0.6;
+  color: black;
   pointer-events: none;
 }
-/* Keyframes are used for animations specifically for CSS, it was nice to learn it*/
+
 @keyframes bounce {
   0%,
   100% {
@@ -126,7 +140,61 @@ body {
   }
 }
 
-/* Resume design section*/
+/* Hobbies Section */
+.hobbies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+  padding: 2rem;
+}
+
+.hobby {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 300px;
+  max-width: 400px;
+  gap: 1rem;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.hobby h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.hobby p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.hobby-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Resume Section */
 .resume {
   background-color: #fff;
   color: #222;
@@ -137,6 +205,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
   gap: 2rem;
   width: 100%;
   max-width: 1000px;
@@ -169,13 +238,44 @@ body {
   padding: 1rem;
   border-left: 3px solid #000;
   background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
 }
 
-.duration {
-  font-style: italic;
-  opacity: 0.6;
+/* Animated Background Hover Effect */
+.hobby::before,
+.project-card::before,
+.experience-item::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.05), transparent 60%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+  left: var(--x);
+  top: var(--y);
 }
 
+.hobby:hover::before,
+.project-card:hover::before,
+.experience-item:hover::before {
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hobby > *,
+.project-card > *,
+.experience-item > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Projects Section */
 .projects {
   display: flex;
   gap: 1rem;
@@ -183,23 +283,147 @@ body {
   justify-content: center;
 }
 
-.project-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 140px;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s ease;
+.projects-section {
+  padding: 3rem 1rem;
+  width: 100%;
+  height: auto;
+  text-align: center;
 }
 
-.project-card:hover {
-  transform: scale(1.05);
+.projects-section h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.project-card {
+  position: relative;
+  width: 200px;
+  height: 140px;
+  text-decoration: none;
+  color: white;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .project-card img {
   width: 100%;
-  height: 100px;
+  height: 100%;
   object-fit: cover;
+  display: block;
   border-radius: 8px;
+  transition: transform 0.3s ease-in;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-out;
+}
+
+.project-card p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Cheat Sheet Section */
+#cheatsheet {
+  padding: 3rem 1rem;
+  background-color: #fefefe;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cheatsheet h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 1000px;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table thead {
+  background-color: #333;
+  color: #fff;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #eee;
+  word-break: break-word;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Styling for code elements in the table */
+.table code {
+  background-color: #f4f4f4;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #d63384;
+}
+
+@media (hover: hover) {
+  .table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+}
+
+/* Hamburger Menu */
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background: #000; /* example */
+  position: absolute;
+  top: 50px;
+  right: 10px;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+}
+/* Desktop nav style override */
+.nav-links.desktop {
+  display: flex !important;
+  flex-direction: row;
+  position: static;
+  background: transparent;
+  gap: 1rem;
 }

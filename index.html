@@ -6,48 +6,123 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Jansen Agcaoili | Portfolio</title>
   </head>
+
   <body>
-    <header class="nav">
-      <h3>Jansen Agcaoili</h3>
-      <nav class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#resume">Resume</a>
+    <nav class="nav">
+      <h3><a href="#" class="Name">Jansen Agcaoili</a></h3>
+      <div class="hamburger" id="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#intro">Intro</a>
         <a href="#hobbies">Hobbies</a>
-        <a href="#cheatsheet">CSS Cheat Sheet</a>
-      </nav>
-    </header>
+        <a href="#resume">Resume</a>
+        <a href="#projects">Projects</a>
+        <a href="#cheatsheet">Cheat Sheet</a>
+      </div>
+    </nav>
 
     <main class="container">
-      <section id="home" class="section">
+      <section id="home" class="section intro">
         <div class="intro-content">
-          <img src="Photos/ProPic.jpg" alt="Profile Picture" class="Profile-Image" />
+          <img
+            src="Photos/ProPic.jpg"
+            alt="Profile Picture"
+            class="Profile-Image"
+          />
           <h1>Hello, I'm Jansen 👋</h1>
-          <p>
-            An aspiring Full Stack Developer/Personal Trainer. Welcome to my
-            website!
-          </p>
+          <p>An aspiring Full Stack Developer. Welcome to my website!</p>
           <div class="scroll-down">
             <span>↓</span>
+          </div>
         </div>
       </section>
 
-      <section id="resume" class="resume section">
+      <section id="hobbies" class="section">
+        <h2>Hobbies</h2>
+
+        <div class="hobbies-container">
+          <!-- Programming Hobby -->
+          <div class="hobby">
+            <h3>Programming</h3>
+            <p>
+              Programming is one of my hobbies. I may not be here if I didn’t
+              love programming since it does take a lot of time and effort to
+              understand how to program different languages. The logic is
+              usually the same, it's just the syntax that brings headaches.
+            </p>
+            <img
+              src="Photos/Programming.png"
+              alt="Programming"
+              class="hobby-image"
+            />
+            <p>
+              I prefer back-end development but want to be efficient in both to
+              become a full-stack developer. Some stacks I love are:
+            </p>
+
+            <ul class="info-list">
+              <li>✅ Python</li>
+              <li>✅ HTML & CSS</li>
+              <li>✅ JavaScript & React</li>
+              <li>✅ C# (with Unity & Web APIs)</li>
+              <li>✅ C++</li>
+            </ul>
+          </div>
+
+          <!-- Working Out Hobby -->
+          <div class="hobby">
+            <h3>Working Out</h3>
+            <p>
+              Stay lean, be aesthetic! I love working out because I always
+              strive to become a better version of myself. It started back in
+              the late 2020s. Now, it's not a chore — it's fun.
+            </p>
+            <img
+              src="Photos/dumbbells.png"
+              alt="dumbbells"
+              class="hobby-image"
+            />
+            <p>
+              I’m currently a personal trainer at GoodLife Fitness. I help
+              clients reach their goals by teaching them the fundamentals of
+              fitness and performance.
+            </p>
+
+            <ul class="info-list">
+              <li>🏋️ Strength Training</li>
+              <li>💪 Resistance Training</li>
+              <li>🏃‍♂️ Conditioning and stretching</li>
+              <li>🧘‍♂️ Personal Coaching</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="resume" class="section resume">
         <div class="resume-container">
           <div class="resume-left">
             <h2>Personal Profile</h2>
-            <p>A devoted, competent, and persevering individual whose primary goal is to 
-              learn and cultivate technology knowledge towards excellence. Actively been part of several
-              circles who specialize in specific aspects such as technology and fitness as well as retaining 
-              positive relations and communications to people to ensure a healthy environment. Seeking and making sure to 
-              gain useful experience every day and willing to learn as well as to cooperate in order to improve 
-              performance and consistency. </p>
+            <p>
+              A devoted, competent, and persevering individual whose primary
+              goal is to learn and cultivate technology knowledge towards
+              excellence. Actively been part of several circles who specialize
+              in specific aspects such as technology and fitness as well as
+              retaining positive relations and communications to people to
+              ensure a healthy environment. Seeking and making sure to gain
+              useful experience every day and willing to learn as well as to
+              cooperate in order to improve performance and consistency.
+            </p>
 
             <ul class="info-list">
               <li><strong>Email:</strong> ajagcaoili4@gmail.com</li>
               <li><strong>Location:</strong> Alberta, Canada</li>
               <li><strong>Phone:</strong> +1 403-919-6306</li>
             </ul>
-      
+
             <h3>Skills</h3>
             <ul class="skills-list">
               <li>HTML, CSS, JavaScript</li>
@@ -59,47 +134,255 @@
               <li>CISCO CCNA certificate holder</li>
             </ul>
           </div>
-      
+
           <div class="resume-right">
-            <h3>Experience</h3>
             <div class="experience-item">
-              <h4>Website Developer</h4>
-              <p class="duration">October 2024 – Feb 2025</p><br/>
-              <p>•	Led the team in creating the website using various tools (Figma, Visual Studio Code, Squarespace)</p>
-              <p>•	Created 80% of the design for the revision</p>
+              <h3>Experience</h3>
+              <br />
+              <h4>Affinity Mentorship Foundation - Website Developer</h4>
+              <p class="duration">October 2024 – Feb 2025</p>
+              <li>
+                Led the team in creating the website using various tools (Figma,
+                Visual Studio Code, Squarespace)
+              </li>
+              <li>Created 80% of the design for the revision</li>
+              <br />
+              <h4>Hack Masters Club - President</h4>
+              <p class="duration">2024</p>
+              <li>
+                Aid 8 members who needed help with their studies in Software
+                Programming.
+              </li>
+              <li>
+                Handled team meetings and collaborative conversations with other
+                student body organizations.
+              </li>
+              <br />
+              <h4>
+                College of Informatics and Computing Sciences Student Council –
+                Public Relations Officer
+              </h4>
+              <p class="duration">2022</p>
+              <li>
+                Handled 50% of photos, publication materials, as well as
+                captions for social media postings on Facebook.
+              </li>
+              <li>
+                Spearheaded HACKTOBERFEST main team, a student council event
+                that is citywide (Batangas). Primarily tackles webinar about
+                technology/cybersecurity and programming skills/quiz bee
+                competition that was joined by 16 students across different BSU
+                schools.
+              </li>
+              <br />
+              <h4>
+                Association of Committed Computer Science Students - Vice
+                President
+              </h4>
+              <p class="duration">2022</p>
+              <li>
+                Handled the technical team of the organization and provided fun
+                and healthy environment during council meetings.
+              </li>
+              <li>
+                Lead and organized the HACKTOBERFEST – programming competition
+                organizing team (Joint project together with CICS SC).
+              </li>
             </div>
-      
-            <h3>Education</h3>
+
             <div class="education-item">
+              <h3>Education</h3>
+              <br />
               <h4>Software Development Diploma</h4>
-              <p class="duration">Jan 2024 - Present</p><br/>
+              <p class="duration">2024 - Present</p>
               <p>Bow Valley College</p>
+              <li>Cumulative GPA: 3.74</li>
+              <br />
+              <h4>BS Computer Science</h4>
+              <p class="duration">2021 - 2022</p>
+              <p>
+                Batangas State University - The National Engineering University
+                Alangilan
+              </p>
+              <li>Dean's lister First year 2nd semester: GWA: 1.3696</li>
+              <br />
+              <h4>Secondary Education</h4>
+              <p class="duration">2020-2021</p>
+              <p>Don Bosco Canlubang</p>
+              <li>
+                • With Honors | GWA: 94 | Service awardee | With academic awards
+              </li>
             </div>
-      
-            <h3>Projects</h3>
-            <div class="projects">
-              <a href="#" class="project-card">
-                <img src="project1.png" alt="Project Sample" />
-                <p>Simple Portfolio Website</p>
-              </a>
-              <a href="#" class="project-card">
-                <img src="project2.png" alt="Project Sample" />
-                <p>Interactive JS Calculator</p>
-              </a>
+
+            <div class="projects-section">
+              <h3>Projects</h3>
+
+              <div class="projects">
+                <a
+                  href="https://github.com/Agcaoili4/Restaurant-Android-App"
+                  target="_blank"
+                  class="project-card"
+                >
+                  <img src="Photos/App-1.png" alt="Sushi-Go Restaurant App" />
+                  <p>Sushi-Go Restaurant App</p>
+                </a>
+
+                <a
+                  href="https://github.com/Agcaoili4/Iruma-Where-the-figure-lies"
+                  target="_blank"
+                  class="project-card"
+                >
+                  <img src="Photos/IrumaPrototype.png" alt="Prototype Game" />
+                  <p>Iruma-Where the Figure Lies (prototype game)</p>
+                </a>
+
+                <div class="projects">
+                  <a
+                    href="https://github.com/Agcaoili4/HackMastersClub.github.io"
+                    target="_blank"
+                    class="project-card"
+                  >
+                    <img
+                      src="Photos/Hack Masters Club.png"
+                      target="_blank"
+                      alt="Club website"
+                    />
+                    <p>Hack Masters Club Website</p>
+                  </a>
+                </div>
+
+                <div class="projects">
+                  <a
+                    href="https://www.affinitymentorship.com/"
+                    target="_blank"
+                    class="project-card"
+                  >
+                    <img
+                      src="Photos/Affinity Mentorship Foundation.png"
+                      alt="Affinity Mentorship Website"
+                    />
+                    <p>Affinity Mentorship Foundation Website</p>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>      
-
-      <section id="hobbies" class="section">
-        <h2>Hobbies</h2>
-        <p>Coming soon...</p>
       </section>
 
-      <section id="cheatsheet" class="section">
+      <section id="cheatsheet">
         <h2>CSS Cheat Sheet</h2>
-        <p>Coming soon...</p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Property / Feature</th>
+              <th>Description</th>
+              <th>Code Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Selectors</td>
+              <td>Basic element targeting in CSS</td>
+              <td><code>p, .class, #id</code></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Color</td>
+              <td>Set text and background colors</td>
+              <td><code>color: red; background-color: #000;</code></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Box Model</td>
+              <td>Controls spacing inside and outside elements</td>
+              <td><code>margin, padding, border</code></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Display</td>
+              <td>Defines how an element behaves visually</td>
+              <td><code>display: flex;</code></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Flexbox</td>
+              <td>One-dimensional layout system</td>
+              <td><code>justify-content: center;</code></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Grid</td>
+              <td>Two-dimensional layout system</td>
+              <td><code>display: grid;</code></td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Font Styling</td>
+              <td>Customizes text appearance</td>
+              <td><code>font-size: 16px; font-family: sans-serif;</code></td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Positioning</td>
+              <td>Controls placement of elements</td>
+              <td><code>position: relative;</code></td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Z-Index</td>
+              <td>Stack elements above/below others</td>
+              <td><code>z-index: 999;</code></td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Hover</td>
+              <td>Style on mouse hover</td>
+              <td><code>a:hover { color: blue; }</code></td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Transitions</td>
+              <td>Smooth animations on change</td>
+              <td><code>transition: all 0.3s;</code></td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>Border Radius</td>
+              <td>Rounds corners</td>
+              <td><code>border-radius: 8px;</code></td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>Box Shadow</td>
+              <td>Adds shadow for depth</td>
+              <td><code>box-shadow: 0 2px 4px rgba(0,0,0,0.2);</code></td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>Media Queries</td>
+              <td>Responsive styles for smaller screens</td>
+              <td><code>@media (max-width: 600px) { ... }</code></td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Variables</td>
+              <td>Reusable custom property</td>
+              <td><code>:root { --main-color: #f00; }</code></td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <a href="https://devhints.io/css" target="_blank" class="Name"
+          >Credits: devhints</a
+        >
       </section>
     </main>
+
+    <footer>
+      <p>© 2025 Jansen Agcaoili</p>
+    </footer>
   </body>
 </html>
